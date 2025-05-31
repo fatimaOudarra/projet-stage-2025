@@ -11,8 +11,8 @@
 
 ## Durée du stage
 
-- 1 moi(7)
-- 
+ 1 mois
+ 
 ## Description du projet
 
 Ce projet consiste à développer une application web permettant aux clients de l’entreprise **Creative Internet Solutions** de soumettre facilement leurs demandes de création de site web via un formulaire en ligne avancé.  
