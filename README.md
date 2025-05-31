@@ -1,5 +1,5 @@
 # projet-stage-2025
-# Portail de demande de création de site web (Formulaire avancé)
+# Portail de demande de création de sit web (Formulaire avancé)
 
 
 ## Équipe du projet
