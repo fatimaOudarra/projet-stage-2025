@@ -5,7 +5,7 @@
 ## Équipe du projet
 
 - Fatima Oudarra  
-- Fatima Aut Said Oulah  
+- Fatima Aut Said Oulahssen  
 
 ---
 
