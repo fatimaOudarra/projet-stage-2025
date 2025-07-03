@@ -1,4 +1,4 @@
-/* خلفية متدرجة وملمس ناعم */
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #6dd5ed, #2193b0);
@@ -7,7 +7,7 @@ body {
   color: #333;
 }
 
-/* عنوان أنيق */
+
 h1 {
   text-align: center;
   color: #fff;
@@ -15,7 +15,7 @@ h1 {
   text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
 }
 
-/* تصميم النموذج */
+
 form {
   max-width: 650px;
   margin: auto;
@@ -26,7 +26,7 @@ form {
   backdrop-filter: blur(8px);
 }
 
-/* عناوين الحقول */
+
 label {
   display: block;
   margin-top: 20px;
@@ -35,7 +35,7 @@ label {
   color: #2c3e50;
 }
 
-/* الحقول */
+
 input[type="text"],
 input[type="email"],
 select,
@@ -59,12 +59,12 @@ textarea:focus {
   background-color: #fff;
 }
 
-/* تنسيق checkboxes */
+
 input[type="checkbox"] {
   margin-right: 8px;
 }
 
-/* زر الإرسال */
+
 input[type="submit"] {
   margin-top: 30px;
   width: 100%;
@@ -85,7 +85,7 @@ input[type="submit"]:hover {
   transform: scale(1.02);
 }
 
-/* Responsive للهاتف */
+
 @media (max-width: 600px) {
   form {
     padding: 25px;
