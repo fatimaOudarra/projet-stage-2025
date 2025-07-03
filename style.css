@@ -1,0 +1,97 @@
+/* خلفية متدرجة وملمس ناعم */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #6dd5ed, #2193b0);
+  margin: 0;
+  padding: 40px;
+  color: #333;
+}
+
+/* عنوان أنيق */
+h1 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+/* تصميم النموذج */
+form {
+  max-width: 650px;
+  margin: auto;
+  background-color: #ffffffd9;
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  backdrop-filter: blur(8px);
+}
+
+/* عناوين الحقول */
+label {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* الحقول */
+input[type="text"],
+input[type="email"],
+select,
+textarea,
+input[type="file"] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  transition: 0.3s ease;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #2193b0;
+  outline: none;
+  background-color: #fff;
+}
+
+/* تنسيق checkboxes */
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* زر الإرسال */
+input[type="submit"] {
+  margin-top: 30px;
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(to right, #2193b0, #6dd5ed);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+input[type="submit"]:hover {
+  background: linear-gradient(to right, #6dd5ed, #2193b0);
+  transform: scale(1.02);
+}
+
+/* Responsive للهاتف */
+@media (max-width: 600px) {
+  form {
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
