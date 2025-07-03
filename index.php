@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <title>Demande de création de site web</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Formulaire de demande de création de site web</h1>
-
     <form action="process.php" method="POST" enctype="multipart/form-data">
+        <label>Nom complet:</label>
+        <input type="text" name="name" required>
+        <label>Email:</label>
+        <input type="email" name="email" required>
         <!-- Type de site -->
         <label for="type_site">Type de site :</label>
         <select name="type_site" id="type_site" required>
@@ -41,11 +45,13 @@
 
         <!-- Couleurs et préférences -->
         <label for="couleurs">Couleurs préférées ou autres détails :</label>
-        <textarea name="couleurs" id="couleurs" rows="3" cols="50" placeholder="Ex. Bleu foncé et blanc, style moderne..."></textarea>
+        <textarea name="couleurs" id="couleurs" rows="3" cols="50"
+            placeholder="Ex. Bleu foncé et blanc, style moderne..."></textarea>
         <br><br>
 
         <!-- Bouton submit -->
         <input type="submit" value="Envoyer la demande">
     </form>
 </body>
+
 </html>
