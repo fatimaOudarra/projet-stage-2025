@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Demande de création de site web</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
@@ -85,6 +86,7 @@
 
         </form>
     </main>
+<script src="js/form.js" defer></script>
 
 </body>
 </html>
