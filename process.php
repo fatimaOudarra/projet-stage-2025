@@ -1,5 +1,5 @@
 <?php 
-
+session_start(); 
 $conn = new mysqli("localhost", "root", "", "site");
 
 if ($conn->connect_error) {
@@ -7,12 +7,15 @@ if ($conn->connect_error) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $name      = $_POST["name"];
-    $email     = $_POST["email"];
-    $type      = $_POST["type_site"];
-    $pages     = isset($_POST["pages"]) ? implode(", ", $_POST["pages"]) : "";
-    $examples  = $_POST["exemples"];
-    $notes     = $_POST["couleurs"];
+    $name = $_POST["nom"];
+    $email = $_POST["email"];
+    $telephone = $_POST["telephone"];
+    $type = $_POST["type_site"];
+    $pages = isset($_POST["pages"]) ? implode(", ", $_POST["pages"]) : "";
+    $examples = $_POST["exemples"];
+    $notes = $_POST["couleurs"];
+    $budget = $_POST["budget"];
+    $delai = $_POST["delai"];
 
     $logo = null;
     if (!empty($_FILES["logo"]["name"])) {
@@ -20,11 +23,22 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         move_uploaded_file($_FILES["logo"]["tmp_name"], $logo);
     }
 
-    $stmt = $conn->prepare("INSERT INTO demandes (name, email, site_type, pages, examples, notes, logo) VALUES (?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssssss", $name, $email, $type, $pages, $examples, $notes, $logo);
+    $stmt = $conn->prepare("INSERT INTO demandes 
+        (name, email, telephone, site_type, pages, examples, notes, logo, budget, delai) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+
+    $stmt->bind_param("ssssssssii", $name, $email, $telephone, $type, $pages, $examples, $notes, $logo, $budget, $delai);
 
     if ($stmt->execute()) {
-        echo "<h2 style='color:green; text-align:center;'>✅ Demande envoyée avec succès !</h2>";
+        $id = $stmt->insert_id;
+        $_SESSION['demande_id'] = $id;
+        echo "
+    <div style='text-align:center; margin-top:50px;'>
+        <h2 style='color:green;'>✅ Demande envoyée avec succès !</h2>
+        <p><a href='voir.php' style='font-size:18px; color:#007BFF;'>👉 Voir les informations envoyées</a></p>
+    </div>
+";
+
     } else {
         echo "<h2 style='color:red;'>❌ Erreur : " . $stmt->error . "</h2>";
     }
@@ -32,8 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $stmt->close();
     $conn->close();
 } else {
-    echo "<h2>⛔ Accès non autorisé.</h2>";
+    echo "<h2 style='color:red;'>⛔ Accès non autorisé.</h2>";
 }
-
 
 ?>
