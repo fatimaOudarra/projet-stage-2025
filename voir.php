@@ -7,7 +7,7 @@ if ($conn->connect_error) {
     die("Erreur de connexion : " . $conn->connect_error);
 }
 
-// Vérifier si l'utilisateur عندو session
+
 if (!isset($_SESSION['demande_id'])) {
     echo "<h2 style='color:red;'>⛔ Accès refusé. Aucune session active.</h2>";
     exit();
