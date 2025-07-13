@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <title>Demande de création de site web</title>
     <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
 
     <main>
@@ -30,15 +32,24 @@
             <!-- Type de site -->
             <fieldset>
                 <legend>Type de site souhaité</legend>
+
                 <label for="type_site">Type de site :</label>
-                <select name="type_site" id="type_site" required>
+                <select name="type_site" id="type_site" required onchange="toggleOtherField()">
                     <option value="">-- Sélectionner --</option>
                     <option value="ecommerce">E-commerce</option>
                     <option value="vitrine">Site vitrine</option>
                     <option value="blog">Blog</option>
                     <option value="autre">Autre</option>
                 </select>
+
+                <div id="autre_field" style="display:none; margin-top: 10px;">
+                    <label for="type_site_autre">Précisez le type de site :</label>
+                    <input type="text" name="type_site_autre" id="type_site_autre" placeholder="Précisez le type">
+
+
+                </div>
             </fieldset>
+
 
             <!-- Pages souhaitées -->
             <fieldset>
@@ -66,7 +77,8 @@
                 <input type="file" name="logo" id="logo" accept="image/*">
 
                 <label for="couleurs">Couleurs souhaitées / style :</label>
-                <textarea name="couleurs" id="couleurs" rows="3" placeholder="Ex. Bleu foncé, style minimaliste..."></textarea>
+                <textarea name="couleurs" id="couleurs" rows="3"
+                    placeholder="Ex. Bleu foncé, style minimaliste..."></textarea>
             </fieldset>
 
             <!-- Détails techniques -->
@@ -85,7 +97,8 @@
 
         </form>
     </main>
-<script src="js/form.js" defer></script>
+    <script src="form.js" defer></script>
 
 </body>
+
 </html>

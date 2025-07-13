@@ -17,6 +17,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $budget = $_POST["budget"];
     $delai = $_POST["delai"];
 
+
+if ($type === "autre" && !empty($_POST["type_site_autre"])) {
+    $type = $_POST["type_site_autre"]; // remplacer "autre" par la vraie valeur saisie
+}
+
+
     $logo = null;
     if (!empty($_FILES["logo"]["name"])) {
         $logo = "uploads/" . time() . "_" . basename($_FILES["logo"]["name"]);
