@@ -30,7 +30,6 @@
             <!-- Type de site -->
             <fieldset>
                 <legend>Type de site souhaité</legend>
-
                 <label for="type_site">Type de site :</label>
                 <select name="type_site" id="type_site" required>
                     <option value="">-- Sélectionner --</option>
