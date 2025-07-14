@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <title>Demande de création de site web</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
@@ -15,7 +14,6 @@
 
         <form action="process.php" method="POST" enctype="multipart/form-data">
 
-            <!-- Informations de contact -->
             <fieldset>
                 <legend>Vos coordonnées</legend>
 
@@ -29,7 +27,6 @@
                 <input type="tel" name="telephone" id="telephone">
             </fieldset>
 
-            <!-- Type de site -->
             <fieldset>
                 <legend>Type de site souhaité</legend>
 
@@ -45,13 +42,9 @@
                 <div id="autre_field" style="display:none; margin-top: 10px;">
                     <label for="type_site_autre">Précisez le type de site :</label>
                     <input type="text" name="type_site_autre" id="type_site_autre" placeholder="Précisez le type">
-
-
                 </div>
             </fieldset>
 
-
-            <!-- Pages souhaitées -->
             <fieldset>
                 <legend>Pages à inclure</legend>
                 <label><input type="checkbox" name="pages[]" value="Accueil"> Accueil</label><br>
@@ -61,7 +54,6 @@
                 <label><input type="checkbox" name="pages[]" value="Blog"> Blog</label>
             </fieldset>
 
-            <!-- Inspirations -->
             <fieldset>
                 <legend>Inspiration ou exemples</legend>
 
@@ -69,7 +61,6 @@
                 <textarea name="exemples" id="exemples" rows="4" placeholder="Lien ou description..."></textarea>
             </fieldset>
 
-            <!-- Détails visuels -->
             <fieldset>
                 <legend>Identité visuelle</legend>
 
@@ -77,11 +68,9 @@
                 <input type="file" name="logo" id="logo" accept="image/*">
 
                 <label for="couleurs">Couleurs souhaitées / style :</label>
-                <textarea name="couleurs" id="couleurs" rows="3"
-                    placeholder="Ex. Bleu foncé, style minimaliste..."></textarea>
+                <textarea name="couleurs" id="couleurs" rows="3" placeholder="Ex. Bleu foncé, style minimaliste..."></textarea>
             </fieldset>
 
-            <!-- Détails techniques -->
             <fieldset>
                 <legend>Informations supplémentaires</legend>
 
@@ -92,7 +81,6 @@
                 <input type="number" name="delai" id="delai" min="1">
             </fieldset>
 
-            <!-- Envoyer -->
             <input type="submit" value="Envoyer la demande">
 
         </form>
