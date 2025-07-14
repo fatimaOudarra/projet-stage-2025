@@ -51,7 +51,7 @@ Permettre la création automatisée d’un cahier des charges à partir des donn
 ## Structure du projet
 
 ── index.php # Page principale avec le formulaire
-├── process.php # Script PHP qui traite les données du formulaire
+├── process.php # Script PHP qui traite les données du formulaire __voir.php:Page statique de confirmation/consultation
 ├── uploads/ # Dossier pour stocker les fichiers uploadés
 ├── cahier_des_charges/ # Dossier pour générer les dossiers PDF ou rapports
 ├── css/
