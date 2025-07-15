@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$conn = new mysqli("localhost", "root", "", "site");
+$conn = new mysqli("localhost", "root", "", "site_requests");
 
 if ($conn->connect_error) {
     die("Erreur de connexion : " . $conn->connect_error);
@@ -110,7 +110,18 @@ $row = $result->fetch_assoc();
         <?php endif; ?>
     </div>
 
+
+    <div style="text-align: center; margin-top: 30px;">
+    <form action="index.php" method="post" style="display:inline;">
+        <input type="submit" value="📝 Modifier les informations" style="padding: 10px 20px; font-weight:bold;">
+    </form>
+
+    <form action="logout.php" method="post" style="display:inline; margin-left: 10px;">
+        <input type="submit" value="🚪 Quitter" style="padding: 10px 20px; font-weight:bold; background-color:#e74c3c; color:white;">
+    </form>
+</div>
     <div class="footer-note">Merci d'avoir soumis votre demande 🙏</div>
+
 </div>
 </body>
 
