@@ -28,35 +28,46 @@ Permettre la création automatisée d’un cahier des charges à partir des donn
 
 ## Fonctionnalités
 
-- Formulaire en ligne dynamique et facile à remplir.  
-- Choix du type de site web (e-commerce, site vitrine, blog, etc.).  
-- Sélection des pages souhaitées (Accueil, À propos, Contact, Boutique, etc.).  
-- Possibilité de fournir des exemples de sites appréciés.  
-- Upload de logo et autres éléments graphiques.  
-- Personnalisation des couleurs et autres détails spécifiques.  
-- Génération automatique d’un dossier complet (cahier des charges) à envoyer à l’administrateur.
+- Page d'accueil (accueil.php) pour vérifier l'existence d'une demande à l'aide du nom + code
+- Formulaire complet (index.php) pour soumettre une nouvelle demande.  
+- Upload de logo et éléments graphiques.
+- Choix du type de site et personnalisation des couleurs/styles.  
+- Sélection des pages souhaitées (Accueil, Contact, Boutique, etc.).
+- Génération automatique d'un code unique pour suivre la demande.  
+- Page de visualisation (voir.php) de la demande soumise.
+- Gestion de fichiers uploadés (logo).
+- Système de vérification des données via check.php.
 
 ---
 
 ## Technologies utilisées
 
-- **PHP** : Backend pour gérer les données du formulaire et générer le dossier final.  
+- **PHP** : Traitement backend des formulaires, sessions, stockage en base de données.
 - **HTML5 & CSS3** : Structure et design du formulaire.  
-- **JavaScript** (optionnel) : Pour rendre le formulaire dynamique et interactif.  
-- **Base de données** (facultatif) : MySQL ou SQLite pour stocker les demandes.  
+- **JavaScript** : Pour rendre le formulaire dynamique et interactif (form.js). 
+-**MySQL** – Base de données site_requests pour enregistrer les demandes (table demandes).  
 - **Gestion des fichiers** : Pour recevoir et stocker les fichiers uploadés (logo, documents, etc.).
 
 ---
 
 ## Structure du projet
-
-── index.php # Page principale avec le formulaire
-├── process.php # Script PHP qui traite les données du formulaire __voir.php:Page statique de confirmation/consultation
-├── uploads/ # Dossier pour stocker les fichiers uploadés
-├── cahier_des_charges/ # Dossier pour générer les dossiers PDF ou rapports
+/ (Racine du projet)
+│
+├── accueil.php              # Page d'accueil (nom + code pour retrouver une demande)
+├── check.php                # Vérification des données soumises (redirige vers voir.php si ok)
+├── index.php                # Formulaire de demande de site web
+├── process.php              # Traitement des données du formulaire + insertion BDD
+├── voir.php                 # Affichage des détails d'une demande existante
+│
+├── uploads/                 # Contient les fichiers/logo uploadés par l’utilisateur
+│
 ├── css/
-│ └── style.css # Styles CSS
+│   └── style.css            # Feuille de style principale
+│
 ├── js/
-│ └── form.js # Scripts JavaScript (optionnel)
-└── README.md # fichier explicatif
+│   └── form.js              # Scripts JavaScript pour champs dynamiques
+│
+├── README.md                # Ce fichier (documentation du projet)
+└── site_requests.sql        # (optionnel) Script SQL pour créer la base de données
+
 
