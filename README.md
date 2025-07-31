@@ -45,7 +45,7 @@ Permettre la création automatisée d’un cahier des charges à partir des donn
 - **PHP** : Traitement backend des formulaires, sessions, stockage en base de données.
 - **HTML5 & CSS3** : Structure et design du formulaire.  
 - **JavaScript** : Pour rendre le formulaire dynamique et interactif (form.js). 
--**MySQL** – Base de données site_requests pour enregistrer les demandes (table demandes).  
+- **MySQL** : Base de données site_requests pour enregistrer les demandes (table demandes).  
 - **Gestion des fichiers** : Pour recevoir et stocker les fichiers uploadés (logo, documents, etc.).
 
 ---
