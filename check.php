@@ -21,8 +21,8 @@ if ($result->num_rows === 1) {
     header("Location: voir.php");
     exit();
 } else {
-    echo "<h2 style='color:red; text-align:center;'>❌ Aucune demande trouvée avec ces informations.</h2>";
-    echo "<p style='text-align:center;'><a href='accueil.php'>🔙 Retour à l'accueil</a></p>";
+    echo "<h2 style='color:red; text-align:center;'> Aucune demande trouvée avec ces informations.</h2>";
+    echo "<p style='text-align:center;'><a href='accueil.php'> Retour à l'accueil</a></p>";
 }
 
 $stmt->close();
